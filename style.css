@@ -1,0 +1,9 @@
+/* Reset default margin and padding on the body */
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("assets/black.jpg");
+    /* background-position: center; */
+    background-size: cover;
+  }
+  
