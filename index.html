@@ -1,12 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles/style.css">
-  <title>Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.443/build/spline-viewer.js"></script>
+    <title>Portfolio</title>
+    <style>
+        /* Add CSS to style the loading overlay */
+        #loadingOverlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
 </head>
 <body>
-  <p id="id1">Development in progress...</p>
+    <div id="loadingOverlay">Loading...</div>
+    <spline-viewer id="splineViewer" url="https://prod.spline.design/54KGYfT6MNHQCa9x/scene.splinecode"></spline-viewer>
+
+    <script>
+        const loadingOverlay = document.getElementById("loadingOverlay");
+        const splineViewer = document.getElementById("splineViewer");
+
+        // Listen to the 'viewer-init' event provided by spline-viewer
+        splineViewer.addEventListener("viewer-init", () => {
+            // Hide the loading overlay when the viewer is initialized
+            loadingOverlay.style.display = "none";
+            
+            // Disable zoom in or out
+            splineViewer.setConfig({ controls: { zoom: false } });
+        });
+    </script>
 </body>
 </html>
