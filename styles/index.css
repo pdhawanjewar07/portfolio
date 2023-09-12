@@ -17,6 +17,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    border-color: white;
 
     position: absolute; /* Add this line to make the card appear above everything */
     top: 5%; /* Adjust the vertical position as needed */
