@@ -13,9 +13,16 @@ body {
     text-decoration: none;
 }
 
-.container{
+.menu-container{
     display: flex;
     justify-content: center; /* Horizontally center */
     align-items: center; /* Vertically center */
     height: 100vh;
+    position: relative;
+    flex-direction: column;
+    text-align: center;
+}
+
+.menu-container img{
+    max-width: 70%;
 }
