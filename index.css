@@ -26,3 +26,14 @@ body {
 .menu-container img{
     max-width: 70%;
 }
+
+footer a img{
+    width: 30px;
+    height: 30px;
+    padding: 8px;
+}
+
+footer{
+    display: flex;
+    justify-content: right;
+}
